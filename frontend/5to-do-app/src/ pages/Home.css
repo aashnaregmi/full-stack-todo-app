@@ -1,4 +1,4 @@
-.home-container {
+.home-container ,.container {
   min-height: 90vh;
   padding: 40px;
   text-align: center;
@@ -39,7 +39,7 @@
 }
 
 .primary-btn {
-  background-color: #4CAF50; /* todo green */
+  background-color: #4CAF50; 
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
