@@ -65,19 +65,25 @@
 }
 
 
-.task-list li .delet {
-  cursor: pointer;
-  margin-left: 5px;
+.task-list li .delet,.save {
+ cursor:  pointer;
+  padding: 5px;
+ margin-left: 5px;
+ border-radius: 3px;
   font-weight: bold;
   color:white;
-  background-color: red;
+  background-color: rgba(241, 30, 30, 0.833);
+                  
+                  
 }
 .task-list li .edit {
-  cursor: pointer;
+  cursor:  pointer;
+  padding: 5px;
  margin-right: 5px;
+ border-radius: 3px;
   font-weight: bold;
   color:white;
-  background-color:  #4CAF50;;
+  background-color:  #4caf4fc2;;
 }
 
 .task-list li .delet:hover {

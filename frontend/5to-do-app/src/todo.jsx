@@ -77,7 +77,7 @@ const Todo = () => {
                   onChange={handleeditvalue}
                   className="todo-input"
                 />
-                <span onClick={() => handlesave(index)} className="delet">
+                <span onClick={() => handlesave(index)} className="save">
                   Save
                 </span>
               </>
@@ -87,26 +87,10 @@ const Todo = () => {
               <>
                 {t}
                 <span className="btns">
-                  <span
-                    onClick={() => startEdit(index)}
-                    className="edit"
-                    style={{
-                      padding: "4px",
-                      borderRadius: "3px",
-                      cursor: "pointer",
-                    }}
-                  >
+                  <span onClick={() => startEdit(index)} className="edit">
                     Edit
                   </span>
-                  <span
-                    onClick={() => deletTasks(index)}
-                    className="delet"
-                    style={{
-                      padding: "4px",
-                      borderRadius: "3px",
-                      cursor: "pointer",
-                    }}
-                  >
+                  <span onClick={() => deletTasks(index)} className="delet">
                     Delete
                   </span>
                 </span>
