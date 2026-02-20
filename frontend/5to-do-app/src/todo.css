@@ -1,0 +1,88 @@
+
+.todo-container {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border: 2px solid green;
+  padding: 20px;
+  border-radius: 27px;
+}
+
+/* Heading */
+.todo-container h1 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+/* Wrap input and button on same line */
+.input-container {
+  display: flex;
+  justify-content: center; /* center them horizontally */
+  /* space between input and button */
+  margin-bottom: 20px;
+  gap: 0;
+}
+
+
+.todo-input {
+  padding: 10px;
+  border: 1px solid #4CAF50; /* green border */
+  border-radius: 5px 0 0 5px; /* rounded on left side only */
+  font-size: 16px;
+
+  flex: 1; /* make input take available space */
+}
+
+/* Button styling */
+.add-button {
+  padding: 10px 15px;
+  border: 1px solid #4CAF50;
+ 
+  border-radius: 0 5px 5px 0; /* rounded on right side only */
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Task list */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Individual task */
+.task-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.task-list li .delet {
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: bold;
+  color:white;
+  background-color: red;
+}
+.task-list li .edit {
+  cursor: pointer;
+ margin-right: 5px;
+  font-weight: bold;
+  color:white;
+  background-color:  #4CAF50;;
+}
+
+.task-list li .delet:hover {
+  background-color:rgba(241, 30, 30, 0.833);
+}
+.task-list li .edit:hover {
+  background-color: #4caf4fc2;;
+}
