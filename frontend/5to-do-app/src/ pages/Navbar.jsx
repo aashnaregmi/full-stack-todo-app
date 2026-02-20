@@ -15,11 +15,11 @@ const Navbar = () => {
         <NavLink to="/about">
           <div className="navlinks">About Us</div>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/resource">
           <div className="navlinks">Resources</div>
         </NavLink>
 
-        <NavLink to="/">
+        <NavLink to="/contact">
           <div className="navlinks"> Contact</div>
         </NavLink>
         {/* <NavLink to="/todo">

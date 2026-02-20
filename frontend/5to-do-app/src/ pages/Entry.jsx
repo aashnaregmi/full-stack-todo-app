@@ -9,6 +9,8 @@ import Home from "./home";
 import RootLayout from "./RootLayout";
 import About from "./About";
 import Todo from "../todo";
+import Resource from "./Resource";
+import Contact from "./Contact";
 
 const Entry = () => {
   const router = createBrowserRouter(
@@ -16,6 +18,9 @@ const Entry = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="resource" element={<Resource />} />
+        <Route path="contact" element={<Contact />} />
+
         <Route path="todo" element={<Todo />} />
       </Route>,
     ),
