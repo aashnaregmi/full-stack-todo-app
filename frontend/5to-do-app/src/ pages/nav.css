@@ -1,0 +1,33 @@
+.nav-div{
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+
+  padding: 20px 18px;
+  
+}
+.nav-titles{
+
+  display: flex;
+  gap: 40px;
+margin-right: 45px;
+align-items: center;
+
+}
+
+.nav-titles button{
+font-size: 20px;
+padding: 8px;
+border: none;
+border-radius:5px ;
+}
+a{
+    text-decoration: none;
+
+}
+.navlinks{
+    font-size: 23px;
+color: black;
+font-weight: 100;
+}
