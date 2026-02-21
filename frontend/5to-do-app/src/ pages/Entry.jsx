@@ -12,6 +12,7 @@ import Todo from "../todo";
 import Resource from "./Resource";
 import Contact from "./Contact";
 import Login from "./Login";
+import Signup from "./Signup";
 
 const Entry = () => {
   const router = createBrowserRouter(
@@ -22,6 +23,8 @@ const Entry = () => {
         <Route path="resource" element={<Resource />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
+
         <Route path="todo" element={<Todo />} />
       </Route>,
     ),

@@ -1,0 +1,73 @@
+.signUpDiv{
+   background-color: rgba(255, 255, 255, 0.185);
+ border: 2px solid  white;
+ width: 445px;
+min-height: 655px; border-radius: 15px;
+ box-shadow: 10px 0px 30px  rgba(147, 144, 144, 0.331);
+}
+
+.nameDiv{
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+.inputWrapper{
+    display: flex;
+  flex-direction: column;
+  gap:10px
+}
+.loginlink{
+  text-decoration: underline;
+    color: #2e7d32;
+    margin-left: 5px;
+
+}
+.signupForm p{
+  margin-top: 0px;
+  font-size: 18px;
+  
+}
+.loginDirect{
+  margin: 20px 0;
+  margin-bottom: 10px;
+}
+
+.signupContent{
+  margin-bottom: 1px;
+}
+
+.signupContent h2{
+ font-size: 30px;
+ letter-spacing: 0.04rem;
+ line-height: 3.5rem;
+}
+
+.signupContent h5{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.714);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+.hoverbtn:hover {
+  background-color: #1b4d1b; 
+  transition: background-color 0.3s; 
+}
+
+
+.signupBtn{
+background-color: #1b4d1b; 
+margin-bottom: 10px;
+  transition: background-color 0.3s;}
+
+.error-message-signup {
+  color: red;
+    width: 300px;
+    font-weight:100;
+      max-height: 22px;
+      margin: 0;
+}
+
+
