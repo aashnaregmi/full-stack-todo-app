@@ -1,7 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./nav.css";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/login");
+  };
   return (
     <div className="nav-div">
       <div className="logo">
@@ -27,7 +31,7 @@ const Navbar = () => {
           <li>Todo</li>
         </NavLink> */}
 
-        <button> Login</button>
+        <button onClick={handleLogin}> Login</button>
       </div>
     </div>
   );
