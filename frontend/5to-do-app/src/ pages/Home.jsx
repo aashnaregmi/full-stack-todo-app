@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 const Home = () => {
+  const navigate = useNavigate();
+  const handleLearnMore = () => {
+    navigate("/about");
+  };
+  const handleGetStarted = () => {
+    navigate("/login");
+  };
   return (
     <div>
       <div className="home-container">
@@ -13,13 +20,13 @@ const Home = () => {
           </p>
 
           <div className="home-buttons">
-            <Link to="/signup">
-              <button className="primary-btn">Get Started</button>
-            </Link>
+            <button className="primary-btn" onClick={handleGetStarted}>
+              Get Started
+            </button>
 
-            <Link to="/login">
-              <button className="secondary-btn">Learn More</button>
-            </Link>
+            <button className="secondary-btn" onClick={handleLearnMore}>
+              Learn More
+            </button>
           </div>
         </div>
       </div>
