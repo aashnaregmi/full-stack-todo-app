@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs"
 import User from "../models/user.js"
+import { generateJwtAndCookie } from "../helpers/generateJwtAndCookie.js";
 
 export const signup = async (req, res) => {
     try {
@@ -27,6 +28,8 @@ export const signup = async (req, res) => {
                 message: "User Signup failed"
             })
         }
+
+        generateJwtAndCookie(user.id)
 
         return res.status(201).json({
             success: true,
