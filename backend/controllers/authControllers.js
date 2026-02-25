@@ -29,7 +29,7 @@ export const signup = async (req, res) => {
             })
         }
 
-        generateJwtAndCookie(user.id)
+        generateJwtAndCookie(user.id, res)
 
         return res.status(201).json({
             success: true,
@@ -69,6 +69,8 @@ export const login = async (req, res) => {
                 message: "Invalid credentials."
             })
         }
+
+        generateJwtAndCookie(existingUser.id, res)
 
         return res.status(201).json({
             success: true,
