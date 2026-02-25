@@ -1,18 +1,19 @@
 import bcrypt from "bcryptjs"
 import User from "../models/user.js"
+import { generateJwtAndCookie } from "../helpers/generateJwtAndCookie.js";
 
 export const signup = async (req, res) => {
     try {
-        const {username, email, password} = req.body;
-        if(!username || !email || !password){
+        const { username, email, password } = req.body;
+        if (!username || !email || !password) {
             return res.status(400).json({
                 success: false,
                 message: "All fields are required"
             })
         }
 
-        const userExists = await User.findOne({email})
-        if(userExists){
+        const userExists = await User.findOne({ email })
+        if (userExists) {
             return res.status(400).json({
                 success: false,
                 message: "User already exists"
@@ -20,13 +21,15 @@ export const signup = async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10)
-        const user = await User.create({username, email, password: hashedPassword})
-        if(!user){
+        const user = await User.create({ username, email, password: hashedPassword })
+        if (!user) {
             return res.status(400).json({
                 success: false,
                 message: "User Signup failed"
             })
         }
+
+        generateJwtAndCookie(user.id, res)
 
         return res.status(201).json({
             success: true,
@@ -46,40 +49,36 @@ export const signup = async (req, res) => {
     }
 }
 
-export const login = async () => {
+
+export const login = async (req, res) => {
     try {
-        const {email, password} = req.body;
-        if(!email || !password){
+        const { email, password } = req.body;
+        if (!email || !password) {
             return res.status(400).json({
                 success: false,
                 message: "All fields are required"
             })
         }
 
-        const userExists = await User.findOne({email})
-        if(userExists){
+        const existingUser = await User.findOne({ email })
+        const hashedPassword = await bcrypt.hash(password, 10)
+        const passwordMatch = await bcrypt.compare(password, hashedPassword)
+        if (!existingUser || !passwordMatch) {
             return res.status(400).json({
                 success: false,
-                message: "User already exists"
+                message: "Invalid credentials."
             })
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10)
-        const user = await User.create({username, email, password: hashedPassword})
-        if(!user){
-            return res.status(400).json({
-                success: false,
-                message: "User Signup failed"
-            })
-        }
+        generateJwtAndCookie(existingUser.id, res)
 
         return res.status(201).json({
             success: true,
-            message: "User Signup successful",
+            message: "User login successful",
             data: {
-                id: user._id,
-                username: user.username,
-                email: user.email
+                id: existingUser._id,
+                username: existingUser.username,
+                email: existingUser.email
             }
         })
     } catch (error) {
@@ -90,6 +89,3 @@ export const login = async () => {
         })
     }
 }
-
-
-
