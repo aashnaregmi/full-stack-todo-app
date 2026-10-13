@@ -1,0 +1,277 @@
+
+/* =========================
+   SIGNUP CARD
+========================= */
+
+.signUpDiv {
+  width: min(445px, 100%);
+  min-height: auto;
+  padding: 24px;
+
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E6EF;
+  border-radius: 16px;
+
+  box-shadow: 0 12px 32px rgba(37, 50, 71, 0.10);
+}
+
+
+/* =========================
+   SIGNUP FORM
+========================= */
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  height: auto;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   SIGNUP HEADING
+========================= */
+
+.signupContent {
+  width: 100%;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.signupContent h2 {
+  margin: 0;
+
+  color: #253247;
+  font-size: clamp(23px, 5vw, 30px);
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  line-height: 1.35;
+}
+
+.signupContent h5 {
+  margin-top: 8px;
+
+  color: #526174;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   INPUT WRAPPERS
+========================= */
+
+.signupForm .inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  width: 100%;
+}
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.signupForm input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #CDD6E3;
+  border-radius: 8px;
+
+  background-color: #F7F9FC;
+  color: #253247;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.signupForm input::placeholder {
+  color: #7B8798;
+}
+
+.signupForm input:focus {
+  border-color: #365D96;
+  box-shadow: 0 0 0 3px rgba(54, 93, 150, 0.12);
+}
+
+
+/* =========================
+   CREATE ACCOUNT BUTTON
+========================= */
+
+.signupForm .signupBtn {
+  width: 100%;
+  margin: 4px 0;
+  padding: 12px 16px;
+
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #365D96;
+  color: #FFFFFF;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.signupForm .signupBtn:hover {
+  background-color: #294A7A;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   EXISTING ACCOUNT / LOGIN
+========================= */
+
+.signupForm .loginDirect {
+  margin: 8px 0 0;
+
+  color: #526174;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.signupForm .loginlink {
+  margin-left: 5px;
+
+  color: #365D96;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signupForm .loginlink:hover {
+  color: #294A7A;
+  text-decoration: underline;
+}
+
+
+/* =========================
+   VALIDATION ERRORS
+========================= */
+
+.signupForm .error-message-signup {
+  width: 100%;
+  max-height: none;
+  margin: 0;
+
+  color: #C62828;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   KEYBOARD ACCESSIBILITY
+========================= */
+
+.signupForm button:focus-visible,
+.signupForm .loginlink:focus-visible {
+  outline: 3px solid #AFC6E8;
+  outline-offset: 3px;
+}
+
+
+/* =========================
+   TABLET AND MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .signUpDiv {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .signupForm {
+    gap: 11px;
+    padding: 0;
+  }
+
+  .signupContent {
+    margin-bottom: 6px;
+  }
+
+  .signupContent h2 {
+    font-size: 25px;
+  }
+
+  .signupForm input {
+    font-size: 16px;
+  }
+
+  .signupForm .signupBtn {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL SCREENS
+========================= */
+
+@media (max-width: 360px) {
+  .signUpDiv {
+    padding: 16px;
+  }
+
+  .signupContent h2 {
+    font-size: 22px;
+  }
+
+  .signupForm .loginDirect {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .signupForm input,
+  .signupForm .signupBtn {
+    transition: none;
+  }
+
+  .signupForm .signupBtn:hover {
+    transform: none;
+  }
+}

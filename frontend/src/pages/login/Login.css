@@ -1,0 +1,299 @@
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.formDiv {
+  width: min(445px, 100%);
+  min-height: auto;
+  padding: 28px;
+
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E6EF;
+  border-radius: 16px;
+
+  box-shadow: 0 12px 32px rgba(37, 50, 71, 0.10);
+}
+
+
+/* =========================
+   FORM LAYOUT
+========================= */
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+  height: auto;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.loginContent {
+  width: 100%;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.loginContent h2 {
+  margin: 0;
+
+  color: #253247;
+  font-size: clamp(24px, 5vw, 30px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.loginContent p {
+  margin: 6px 0 0;
+
+  color: #526174;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   INPUT WRAPPERS
+========================= */
+
+.login-inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  width: 100%;
+}
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.Form input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+
+  box-sizing: border-box;
+  border: 1px solid #CDD6E3;
+  border-radius: 8px;
+
+  background-color: #F7F9FC;
+  color: #253247;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+
+  outline: none;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Form input::placeholder {
+  color: #7B8798;
+}
+
+.Form input:focus {
+  border-color: #365D96;
+  box-shadow: 0 0 0 3px rgba(54, 93, 150, 0.12);
+}
+
+.Form input.inputError {
+  border-color: #C62828;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.Form .login-button {
+  width: 100%;
+  padding: 12px 16px;
+
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #365D96;
+  color: #FFFFFF;
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.Form .login-button:hover {
+  background-color: #294A7A;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.Form .forgot-password {
+  margin: 0;
+
+  color: #365D96;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 6px 0;
+
+  background-color: #E0E6EF;
+}
+
+
+/* =========================
+   CREATE ACCOUNT BUTTON
+========================= */
+
+.Form .signup {
+  width: 100%;
+  padding: 11px 14px;
+
+  box-sizing: border-box;
+  border: 1px solid #365D96;
+  border-radius: 8px;
+
+  background-color: #FFFFFF;
+  color: #365D96;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.Form .signup:hover {
+  background-color: #EAF0F8;
+  color: #294A7A;
+}
+
+
+/* =========================
+   VALIDATION ERRORS
+========================= */
+
+.error-message {
+  width: 100%;
+  margin: 0;
+
+  color: #C62828;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   KEYBOARD ACCESSIBILITY
+========================= */
+
+.Form button:focus-visible {
+  outline: 3px solid #AFC6E8;
+  outline-offset: 3px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .formDiv {
+    width: 100%;
+    min-height: auto;
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .Form {
+    gap: 12px;
+  }
+
+  .loginContent {
+    margin-bottom: 4px;
+  }
+
+  .Form input {
+    font-size: 16px;
+  }
+
+  .Form .login-button {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .formDiv {
+    padding: 16px;
+  }
+
+  .loginContent h2 {
+    font-size: 24px;
+  }
+
+  .Form .signup {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .Form input,
+  .Form .login-button,
+  .Form .signup {
+    transition: none;
+  }
+
+  .Form .login-button:hover {
+    transform: none;
+  }
+}
