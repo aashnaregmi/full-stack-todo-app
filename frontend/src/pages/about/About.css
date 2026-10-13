@@ -1,0 +1,227 @@
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-container {
+  width: min(1120px, 100%);
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 28px 32px;
+  box-sizing: border-box;
+  color: #253247;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+
+.about-header {
+  width: 100%;
+  text-align: center;
+  padding: 0 12px;
+  margin-bottom: 28px;
+}
+
+.about-intro {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.about-intro h1 {
+  margin: 0 0 12px;
+  color: #253247;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.about-intro p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #526174;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 0;
+  padding: 20px 22px;
+
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E6EF;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 14px rgba(37, 50, 71, 0.04);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-card:hover {
+  border-color: #C5D4E9;
+  box-shadow: 0 8px 20px rgba(37, 50, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   FEATURE ICONS
+========================= */
+
+.about-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+
+  border-radius: 11px;
+  background-color: #EAF0F8;
+  color: #365D96;
+
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.about-card h2 {
+  margin: 0 0 7px;
+  color: #253247;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.about-card p {
+  margin: 0;
+  color: #526174;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .about-container {
+    min-height: auto;
+    padding: 36px 24px;
+  }
+
+  .about-header {
+    margin-bottom: 24px;
+  }
+
+  .about-intro h1 {
+    font-size: 32px;
+  }
+
+  .about-intro p {
+    font-size: 15px;
+  }
+
+  .about-cards {
+    gap: 14px;
+  }
+
+  .about-card {
+    padding: 18px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 540px) {
+  .about-container {
+    min-height: auto;
+    padding: 30px 18px 36px;
+  }
+
+  .about-header {
+    padding: 0;
+    margin-bottom: 22px;
+  }
+
+  .about-intro h1 {
+    font-size: 29px;
+    letter-spacing: -0.6px;
+  }
+
+  .about-intro p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .about-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+    font-size: 23px;
+  }
+
+  .about-card h2 {
+    font-size: 18px;
+  }
+
+  .about-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card {
+    transition: none;
+  }
+
+  .about-card:hover {
+    transform: none;
+  }
+}
