@@ -8,7 +8,7 @@ import {
 import Home from "./home/Home";
 import RootLayout from "./RootLayout";
 import About from "./about/About";
-import Todo from "../todo";
+import Todo from "./todo/todo";
 
 import Contact from "./contact/Contact";
 import Login from "./login/Login";
