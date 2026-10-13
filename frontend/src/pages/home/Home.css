@@ -1,0 +1,144 @@
+
+.home-container {
+  min-height: 75vh;
+  padding: 64px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #F7F9FC;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  margin: 0 0 24px;
+  color: #253247;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.hero-section p {
+  max-width: 610px;
+  margin: 0 auto 36px;
+  color: #526174;
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  line-height: 1.8;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.primary-btn,
+.secondary-btn {
+  min-width: 150px;
+  padding: 14px 26px;
+  border: 1px solid #365D96;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primary-btn {
+  background-color: #365D96;
+  color: #FFFFFF;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #365D96;
+}
+
+.primary-btn:hover {
+  background-color: #294A7A;
+  border-color: #294A7A;
+  transform: translateY(-2px);
+}
+
+.secondary-btn:hover {
+  background-color: #EAF0F8;
+  transform: translateY(-2px);
+}
+
+.primary-btn:focus-visible,
+.secondary-btn:focus-visible {
+  outline: 3px solid #7895C0;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    min-height: 65vh;
+    padding: 52px 24px;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(2.25rem, 6vw, 3.25rem);
+  }
+
+  .hero-section p {
+    max-width: 540px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    min-height: 60vh;
+    padding: 40px 20px;
+  }
+
+  .hero-section h1 {
+    margin-bottom: 18px;
+    font-size: 2.25rem;
+    line-height: 1.18;
+  }
+
+  .hero-section p {
+    margin-bottom: 26px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary-btn,
+  .secondary-btn {
+    transition: none;
+  }
+
+  .primary-btn:hover,
+  .secondary-btn:hover {
+    transform: none;
+  }
+}
