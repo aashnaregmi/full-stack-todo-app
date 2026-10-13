@@ -1,39 +1,42 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./nav.css";
+
 const Navbar = () => {
   const navigate = useNavigate();
+
   const handleLogin = () => {
     navigate("/login");
   };
+
   return (
-    <div className="nav-div">
+    <nav className="nav-div">
       <div className="logo">
         <h1>Planner</h1>
       </div>
 
       <div className="nav-titles">
-        <NavLink to="/">
-          <div className="navlinks">Home</div>
-        </NavLink>
-        <NavLink to="/about">
-          <div className="navlinks">About Us</div>
-        </NavLink>
-        <NavLink to="/resource">
-          <div className="navlinks">Resources</div>
+        <NavLink to="/" className="navlinks">
+          Home
         </NavLink>
 
-        <NavLink to="/contact">
-          <div className="navlinks"> Contact</div>
+        <NavLink to="/about" className="navlinks">
+          About Us
         </NavLink>
-        {/* <NavLink to="/todo">
-          {" "}
-          <li>Todo</li>
-        </NavLink> */}
 
-        <button onClick={handleLogin}> Login</button>
+        <NavLink to="/resource" className="navlinks">
+          Resources
+        </NavLink>
+
+        <NavLink to="/contact" className="navlinks">
+          Contact
+        </NavLink>
+
+        <button className="nav-login-btn" onClick={handleLogin}>
+          Login
+        </button>
       </div>
-    </div>
+    </nav>
   );
 };
 
