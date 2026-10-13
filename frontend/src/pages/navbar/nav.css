@@ -1,0 +1,130 @@
+
+/* Navbar */
+.nav-div {
+  background-color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  gap: 24px;
+}
+
+/* Logo */
+.logo h1 {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Navigation links and login button */
+.nav-titles {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Remove default link styling */
+.nav-titles a {
+  text-decoration: none;
+}
+
+/* Individual links */
+.navlinks {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.navlinks:hover {
+  opacity: 0.8;
+}
+
+/* Active page indicator */
+.nav-titles a.active .navlinks {
+  border-bottom: 2px solid white;
+  padding-bottom: 6px;
+}
+
+/* Login button */
+.nav-titles button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: white;
+  color: #388e3c;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-titles button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.nav-titles button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .nav-div {
+    padding: 16px 4%;
+    gap: 16px;
+  }
+
+  .nav-titles {
+    gap: 18px;
+    margin-right: 0;
+  }
+
+  .navlinks {
+    font-size: 15px;
+  }
+
+  .nav-titles button {
+    padding: 8px 14px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 540px) {
+  .nav-div {
+    flex-direction: column;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  .nav-titles {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .navlinks {
+    font-size: 14px;
+  }
+
+  .nav-titles button {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
