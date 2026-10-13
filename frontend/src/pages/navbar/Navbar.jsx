@@ -24,10 +24,6 @@ const Navbar = () => {
           About Us
         </NavLink>
 
-        <NavLink to="/resource" className="navlinks">
-          Resources
-        </NavLink>
-
         <NavLink to="/contact" className="navlinks">
           Contact
         </NavLink>

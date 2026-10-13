@@ -1,5 +1,23 @@
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-color: #F7F9FC;
+  color: #253247;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.outlet {
+  min-height: 90vh;
+  width: 100%;
 }

@@ -1,8 +1,8 @@
-import Navbar from "./ pages/Navbar";
+import Navbar from "./pages/navbar/Navbar";
 import "./App.css";
 import Todo from "./todo";
 import "./todo.css";
-import Entry from "./ pages/Entry";
+import Entry from "./pages/Entry";
 function App() {
   return (
     <>
